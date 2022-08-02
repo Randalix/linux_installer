@@ -4,8 +4,29 @@
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
-!_TAG_PROC_CWD	/Users/joe/repos/lnx/	//
+!_TAG_PROC_CWD	/Users/joe/repos/linux_installer/	//
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	5.9.0	//
+command	arch/paru_packages	/^command =  'yes | paru -S packagename --noconfirm'$/;"	v
+command	arch/paru_packages2	/^command =  'yes | paru -S packagename --noconfirm'$/;"	v
+command	debian/deb_packages	/^command =  'sudo apt install -y packagename'$/;"	v
+folder_name	arch/paru_packages2	/^folder_name = Path('bundles')$/;"	v
+get_install_list	arch/paru_packages2	/^def get_install_list():$/;"	f
+install	arch/paru_packages	/^def install(selection):$/;"	f
+install	arch/paru_packages2	/^def install(selection):$/;"	f
+install	debian/deb_packages	/^def install(selection):$/;"	f
+main	arch/paru_packages	/^def main():$/;"	f
+main	arch/paru_packages2	/^def main():$/;"	f
+main	debian/deb_packages	/^def main():$/;"	f
+nnn_selection	arch/paru_packages	/^def nnn_selection():$/;"	f
+nnn_selection	debian/deb_packages	/^def nnn_selection():$/;"	f
+package_selection	arch/paru_packages	/^def package_selection(nnn_selection):$/;"	f
+package_selection	debian/deb_packages	/^def package_selection(nnn_selection):$/;"	f
+read_file	arch/paru_packages	/^def read_file(file):$/;"	f
+read_file	arch/paru_packages2	/^def read_file(file):$/;"	f
+read_file	debian/deb_packages	/^def read_file(file):$/;"	f
+selection_file_path	arch/paru_packages	/^def selection_file_path():$/;"	f
+selection_file_path	debian/deb_packages	/^def selection_file_path():$/;"	f
+user_selection	arch/paru_packages2	/^def user_selection(selected_files):$/;"	f
