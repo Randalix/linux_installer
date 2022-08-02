@@ -1,5 +1,5 @@
 location=de
-read -p "Machine Name" mymachine
+read -p "Machine Name: " mymachine
 read -p "New User Name: " myusr
 read -p "Password: " passwd
 printf "%s" $myusr > myusr
