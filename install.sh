@@ -5,14 +5,21 @@ $update
 $install openssh-server git
 
 # Setup User
+location=de
 read -p "Machine Name" mymachine
 read -p "New User Name: " myusr
 read -p "Password: " passwd
-location=de
 printf "%s" $myusr > myusr
 printf "%s" $passwd > mypass
 printf "%s" $mymachine > mymachine
 chmod 777 mymachine myusr mypass
+
+echo "$mymachine" > /etc/hostname
+echo "" >> /etc/hosts
+echo -e "127.0.0.1\tlocalhost" >> /etc/hosts
+echo -e "::1\t\tlocalhost" >> /etc/hosts
+echo -e "127.0.1.1\t$mymachine.localdomain\t$mymachine" >> /etc/hosts
+echo -e "127.0.1.1\t$mymachine.localdomain\t$mymachine" >> /etc/hosts
 printf "%s" $passwd | passwd &> /dev/null
 useradd -m -c $myusr -s /bin/bash $myusr
 printf "%s" $passwd | passwd $myusr &> /dev/null
