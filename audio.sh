@@ -1,6 +1,6 @@
 # Install Audio
-install="apt install"
-update="apt update; apt upgrade"
+install="$(cat ./install)"
+update="$(cat ./update)"
 
 $install openssh-server git
 $install wireplumber pipewire-media-session- pipewire-pulse pavucontrol alsa-utils
