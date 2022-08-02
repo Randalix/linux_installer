@@ -3,7 +3,7 @@ install="$(cat ./install)"
 update="$(cat ./update)"
 mypass=$(cat mypass)
 myusr=$(cat myusr)
-mymachine=$(cat myusr)
+mymachine=$(cat mymachine)
 
 echo "$mymachine" > /etc/hostname
 echo "" >> /etc/hosts
