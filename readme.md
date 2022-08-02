@@ -1,3 +1,3 @@
 cd /urs/src
 
-git clone git@github.com:Randalix/linux_installer.git
+git clone https://github.com/Randalix/linux_installer.git
