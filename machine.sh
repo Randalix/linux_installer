@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 # Install basics
 install="$(cat ./install)"
 update="$(cat ./update)"

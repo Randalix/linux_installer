@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 ./init.sh
 ./user.sh
 ./location.sh

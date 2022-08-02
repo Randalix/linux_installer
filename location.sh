@@ -1,7 +1,8 @@
 # Setup Location
 install="$(cat ./install)"
 update="$(cat ./update)"
-$install console-data locales
+#dpkg-reconfigure locales
+$install console-data locales locale-gen
 echo "" > /etc/locale.gen
 echo "de_DE.UTF-8 UTF-8">> /etc/locale.gen
 echo "de_DE ISO-8859-1">> /etc/locale.gen

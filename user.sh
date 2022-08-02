@@ -1,10 +1,6 @@
-# Install basics
-install="$(cat ./install)"
-update="$(cat ./update)"
-$update
+#!/usr/bin/env sh
 mypass=$(cat mypass)
 myusr=$(cat myusr)
-mymachine=$(cat myusr)
 
 printf "%s" $passwd | passwd &> /dev/null
 useradd -m -c $myusr -s /bin/bash $myusr

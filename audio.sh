@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 # Install Audio
 install="$(cat ./install)"
 update="$(cat ./update)"

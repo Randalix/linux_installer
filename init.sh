@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 location=de
 read -p "Machine Name: " mymachine
 read -p "New User Name: " myusr
