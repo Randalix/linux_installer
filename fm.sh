@@ -3,4 +3,3 @@
 install="$(cat ./install)"
 update="$(cat ./update)"
 $install vim nnn trash-cli zoxide
-
