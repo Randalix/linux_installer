@@ -16,5 +16,5 @@ sudo visudo -c -f /tmp/sudoers.tmp
 if [ "$?" -eq "0" ]; then
     sudo cp /tmp/sudoers.tmp /etc/sudoers
 fi
-sudo rm /tmp/sudoers.tmp
+#sudo rm /tmp/sudoers.tmp
 
