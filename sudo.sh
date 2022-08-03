@@ -12,6 +12,7 @@ myusr=$(cat myusr)
 mymachine=$(cat myusr)
 
 sudo cp -r /etc/sudoers /tmp/sudoers.tmp
+sudo sed -i "s/# No Password Rules/{N;d;d;}/g" /tmp/sudoers.tmp
 sudo bash -c 'printf "\n%s\n%s %s" "# No Password Rules" "$(cat ./myusr)" "$(cat ./nopass)" >> /tmp/sudoers.tmp'
 #sudo printf "%s\n%s %s" "# No Password Rules" $myusr "$(cat ./nopass)" >> /tmp/sudoers.tmp
 
