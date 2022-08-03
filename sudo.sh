@@ -7,13 +7,14 @@ mypass=$(cat mypass)
 myusr=$(cat myusr)
 mymachine=$(cat myusr)
 
-cp /etc/sudoers /tmp/sudoers.tmp
-#sed -i  "s/# No\ Password Rules/{N;d;}/g" /etc/sudoers.tmp
-sudo printf "%s\n%s %s" "# No Password Rules" $myusr "$(cat ./nopass)" >> /tmp/sudoers.tmp
-printf "\n%s\ssword Rules" "$myusr" "$(cat ./nopass)" > /tmp/sudoers.tmp
-visudo -c -f /tmp/sudoers.tmp
+sudo cp /etc/sudoers /tmp/sudoers.tmp
+sudo bash -c 'printf "%s\n%s %s" "# No Password Rules" $myusr "$(cat ./nopass)" >> /tmp/sudoers.tmp'
+#sudo printf "%s\n%s %s" "# No Password Rules" $myusr "$(cat ./nopass)" >> /tmp/sudoers.tmp
+
+#printf "\n%s\ssword Rules" "$myusr" "$(cat ./nopass)" > /tmp/sudoers.tmp
+sudo visudo -c -f /tmp/sudoers.tmp
 if [ "$?" -eq "0" ]; then
-    cp /tmp/sudoers.tmp /etc/sudoers
+    sudo cp /tmp/sudoers.tmp /etc/sudoers
 fi
-rm /tmp/sudoers.tmp
+sudo rm /tmp/sudoers.tmp
 
