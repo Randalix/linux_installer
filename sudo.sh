@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-# Install basics
 install="$(cat ./install)"
 update="$(cat ./update)"
 $update
@@ -13,7 +12,7 @@ myusr=$(cat myusr)
 mymachine=$(cat myusr)
 
 sudo cp -r /etc/sudoers /tmp/sudoers.tmp
-sudo bash -c 'printf "%s\n%s %s" "# No Password Rules" $myusr "$(cat ./nopass)" >> /tmp/sudoers.tmp'
+sudo bash -c 'printf "\n%s\n%s %s" "# No Password Rules" "$(cat ./myusr)" "$(cat ./nopass)" >> /tmp/sudoers.tmp'
 #sudo printf "%s\n%s %s" "# No Password Rules" $myusr "$(cat ./nopass)" >> /tmp/sudoers.tmp
 
 #printf "\n%s\ssword Rules" "$myusr" "$(cat ./nopass)" > /tmp/sudoers.tmp
